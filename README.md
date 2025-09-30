@@ -15,22 +15,39 @@ Underlying Container: The C++ Standard Template Library (STL) std::queue is not 
 
 
 # Algorithm :
+
 Start the program.
+
 Define a Queue class with:
+
 An array arr[SIZE].
+
 Two integers front and back.
+
 Initialize front = -1, back = -1 in the constructor.
+
 For Enqueue operation:
+
 If back == SIZE-1, print Queue Overflow.
+
 If front == -1, set front = 0.
+
 Increment back and insert value into arr[back].
+
 For Dequeue operation:
+
 If front == -1 or front > back, print Queue Underflow/Empty Queue.
+
 Otherwise, print and remove arr[front], then increment front.
+
 For Display operation:
+
 If front == -1 or front > back, print Queue is empty.
+
 Otherwise, traverse from front to back and print all elements.
+
 In main(), demonstrate enqueue, dequeue, and display operations.
+
 End the program.
 
 # Conclusion :
