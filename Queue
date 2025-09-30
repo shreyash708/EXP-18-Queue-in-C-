@@ -1,0 +1,124 @@
+lude<iostream>
+
+6	+
+using namespace std;
+7	+
+#define SIZE 5
+8	+
+class Queue{
+9	+
+    int arr[SIZE];
+10	+
+    int front, back;
+11	+
+    public:
+12	+
+    Queue(){
+13	+
+        front=-1;
+14	+
+        back=-1;
+15	+
+    }
+16	+
+    void enqueue(int value){
+17	+
+        if(back==SIZE-1){
+18	+
+            cout<<"Queue Overflow"<<endl;
+19	+
+            return;
+20	+
+        }
+21	+
+        if(front==-1){
+22	+
+            front=0;
+23	+
+        }
+24	+
+        arr[++back]=value;
+25	+
+        cout<<value<<" inserted into queue"<<endl;
+26	+
+    }
+27	+
+    void dequeue(){
+28	+
+        if(front==-1 || front>back){
+29	+
+            cout<<"Queue Underflow/ Empty Queue!"<<endl;
+30	+
+            return;
+31	+
+        }
+32	+
+        cout<<arr[front]<<" removed from queue"<<endl;
+33	+
+        front++;
+34	+
+    }
+35	+
+    void display(){
+36	+
+        if(front==-1 || front>back){
+37	+
+            cout<<"Queue is empty"<<endl;
+38	+
+            return;
+39	+
+        }
+40	+
+        cout<<"Queue elements: ";
+41	+
+        for(int i=front; i<=back; i++){
+42	+
+            cout<<arr[i]<<" ";
+43	+
+        }
+44	+
+        cout<<endl;
+45	+
+    }
+46	+
+};
+47	+
+    int main(){
+48	+
+    Queue q;
+49	+
+    q.enqueue(10);  
+50	+
+    q.enqueue(20);
+51	+
+    q.enqueue(30);
+52	+
+    q.enqueue(40);
+53	+
+    q.enqueue(50);
+54	+
+    q.enqueue(60);
+55	+
+    q.display();
+56	+
+    q.dequeue();
+57	+
+    q.dequeue();
+58	+
+    q.dequeue();
+59	+
+    q.dequeue();
+60	+
+    q.dequeue();
+61	+
+    q.dequeue();
+62	+
+    q.dequeue();
+63	+
+    q.display();
+64	+
+    return 0;
+65	+
+    }
+66	+
+/*
